@@ -1,0 +1,33 @@
+block config
+		include ../config/config.pug
+
+doctype html
+<html lang="es"  og: http://ogp.me/ns#>
+	head
+		title #{TituloLanding}
+		meta(property="og:url" content= LinkPagina)
+		meta(property="og:title" content=TituloLanding)
+		
+		meta(property="og:description" content=description) 
+		meta(name = "description" content = description)
+		meta(property="og:site_name" content=ogsitename)
+		meta(property="og:type" content="website")
+		meta(property="og:image" content=ogimage)
+		meta(property="og:image:url" content=ogimageurl)
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="../css/style.min.css"  media="screen,projection"/>
+    	
+	body
+		include ../blocks/menu-landing.pug
+		include ../blocks/slider-landing.pug
+		include ../blocks/modalidades-landing.pug
+		include ../blocks/caracteristicas-landing.pug
+		include ../blocks/ubicanos-landing.pug
+		include ../blocks/footer-landing.pug
+
+		<script type="text/javascript" src="../js/materialize.min.js"></script>
